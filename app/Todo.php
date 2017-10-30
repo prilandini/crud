@@ -6,9 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Todo extends Model
 {
-    protected $fillable = [
-        'id', 'do', 'status',
-    ];
-    // protected $table = 'todos';
+    // protected $fillable = [
+    //     'id', 'do', 'status',
+    // ];
+    protected $table = 'todos';
     
 }

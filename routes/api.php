@@ -37,6 +37,12 @@ Route::group(['middleware' => 'auth:api'], function () {
     Route::put('/todo/{id}', 'TodoController@update');
     Route::delete('/todo/{id}', 'TodoController@destroy');
 
+    //Route for Post
+    Route::get('/post', 'PostController@index');
+    Route::post('/post', 'PostController@create');
+    Route::put('/post/{id}', 'PostController@update');
+    Route::delete('/post/{id}', 'PostController@destroy');
+    
     // Route::get('/todo',function () {
     //     return "HelloWord";
     // });
