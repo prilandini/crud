@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -22,7 +23,7 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
         $user = new User;
         $user->id = $request->id;
@@ -34,7 +35,7 @@ class UserController extends Controller
         return [
             "success" => True, 
             "message" => "Your Data has been save successfully", 
-            "data" => $todo
+            "data" => $user
         ];
     }
 
@@ -85,12 +86,12 @@ class UserController extends Controller
         $user->name = $request->name;
         $user->email = $request->email;
         $user->password = $request->password;
-        $todo->update();
+        $user->update();
 
         return [
             "success" => True, 
             "message" => "Your Data has been updated successfully", 
-            "data" => $todo
+            "data" => $user
         ];
     }
 

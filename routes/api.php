@@ -27,15 +27,16 @@ Route::group(['middleware' => 'auth:api'], function () {
 
     //Route for User 
     Route::get('/userlist', 'UserController@index'); 
-    Route::post('/userlist/new', 'UserController@create');
-    Route::put('/userlist/update/{id}', 'UserController@update');
-    Route::delete('/userlist/del/{id}', 'UserController@destroy');
+    Route::post('/userlist', 'UserController@create');
+    Route::put('/userlist/{id}', 'UserController@update');
+    Route::delete('/userlist/{id}', 'UserController@destroy');
 
     //Route for Todolist
-    Route::get('/todo', 'TodoController@index'); 
-    Route::post('/todo/new', 'TodoController@create');
-    Route::put('/todo/update/{id}', 'TodoController@update');
-    Route::delete('/todo/del/{id}', 'TodoController@destroy');   
+    Route::get('/todo', 'TodoController@index');
+    Route::post('/todo', 'TodoController@create');
+    Route::put('/todo/{id}', 'TodoController@update');
+    Route::delete('/todo/{id}', 'TodoController@destroy');
+
     // Route::get('/todo',function () {
     //     return "HelloWord";
     // });
